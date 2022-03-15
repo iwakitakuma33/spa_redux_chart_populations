@@ -24,7 +24,7 @@ const Main: React.FC = () => {
   return (
     <main>
       <div>main</div>
-      <CheckBoxField />
+      {prefectures && <CheckBoxField />}
       <Graph />
     </main>
   );
