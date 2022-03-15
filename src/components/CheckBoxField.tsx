@@ -6,9 +6,13 @@ import { apiFetcher } from "../utils/apiFetcher/index";
 
 import { selectPrefs } from "../store/prefectures/selectore";
 import { fetchPoplation, deletePoplation } from "../store/populations/action";
+import { fetchGraphData } from "../store/graph/action";
+
+import { selectGraph } from "../store/graph/selectore";
 
 const CheckBoxField: React.FC = () => {
   const dispatch = useDispatch();
+  const graph = useSelector(selectGraph);
 
   const prefectures = useSelector(selectPrefs);
   const handleClickCheck = (
@@ -31,6 +35,14 @@ const CheckBoxField: React.FC = () => {
             data: results.data.result.data[0].data,
           })
         );
+        dispatch(
+          fetchGraphData({
+            prefName: prefName,
+            prefCode: prefCode,
+            data: results.data.result.data[0].data,
+          })
+        );
+        console.log(graph);
       });
     } else {
       dispatch(deletePoplation(prefCode));
