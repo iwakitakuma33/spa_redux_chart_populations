@@ -47,6 +47,12 @@ const CheckBoxField: React.FC = () => {
     }
   };
 
+  const formatPrefName = (prefName: string) => {
+    const indentCount: number = 4 - prefName.length;
+    const indentStr = "　";
+    return indentStr.repeat(indentCount) + prefName;
+  };
+
   return (
     <>
       <div style={Styles.checkcardList}>
@@ -68,7 +74,7 @@ const CheckBoxField: React.FC = () => {
               style={Styles.text}
               htmlFor={"checkbox" + prefecture.prefCode}
             >
-              {prefecture.prefName}
+              {formatPrefName(prefecture.prefName)}
             </label>
           </div>
         ))}
