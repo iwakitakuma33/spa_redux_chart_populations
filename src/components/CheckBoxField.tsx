@@ -12,6 +12,7 @@ const CheckBoxField: React.FC = () => {
   const dispatch = useDispatch();
 
   const prefectures = useSelector(selectPrefs);
+
   const handleClickCheck = (
     prefName: string,
     prefCode: number,
@@ -48,10 +49,9 @@ const CheckBoxField: React.FC = () => {
 
   return (
     <>
-      {" "}
-      <div>
+      <div style={Styles.checkcardList}>
         {prefectures.result.map((prefecture) => (
-          <div key={prefecture.prefName}>
+          <div style={Styles.checkcard} key={prefecture.prefName}>
             <input
               type="checkbox"
               name="Prefecture name"
@@ -64,7 +64,10 @@ const CheckBoxField: React.FC = () => {
               }
               id={"checkbox" + prefecture.prefCode}
             />
-            <label htmlFor={"checkbox" + prefecture.prefCode}>
+            <label
+              style={Styles.text}
+              htmlFor={"checkbox" + prefecture.prefCode}
+            >
               {prefecture.prefName}
             </label>
           </div>
@@ -72,6 +75,23 @@ const CheckBoxField: React.FC = () => {
       </div>
     </>
   );
+};
+
+const Styles: { [key: string]: React.CSSProperties } = {
+  checkcardList: {
+    display: "flex",
+    flexWrap: "wrap",
+    padding: "10px",
+    justifyContent: "flex-start",
+    justifySelf: "auto",
+  },
+  text: { display: "contents", marginLeft: "1em", cursor: "pointer" },
+  checkcard: {
+    borderBottom: "solid 1px",
+    textAlign: "center",
+    padding: "4px",
+    margin: "0.5rem",
+  },
 };
 
 export default CheckBoxField;
