@@ -1,9 +1,11 @@
 import { combineReducers, createStore } from "redux";
 
 import { PrefsReducer } from "./prefectures/reducer";
+import { PopulationsReducer } from "./populations/reducer";
 
 const RootReducer = combineReducers({
   prefs: PrefsReducer,
+  populations: PopulationsReducer,
 });
 
 export type RootState = ReturnType<typeof RootReducer>;
