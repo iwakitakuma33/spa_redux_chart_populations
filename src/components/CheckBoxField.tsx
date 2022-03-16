@@ -8,7 +8,7 @@ import { selectPrefs } from "../store/prefectures/selectore";
 import { fetchPoplation, deletePoplation } from "../store/populations/action";
 import { fetchGraphData, deleteGraphData } from "../store/graph/action";
 
-const CheckBoxField: React.FC = () => {
+const CheckBoxField: React.FC<string> = (label) => {
   const dispatch = useDispatch();
 
   const prefectures = useSelector(selectPrefs);
@@ -55,6 +55,8 @@ const CheckBoxField: React.FC = () => {
 
   return (
     <>
+      <h2 style={Styles.label}>{label}</h2>
+
       <div style={Styles.checkcardList}>
         {prefectures.result.map((prefecture) => (
           <div style={Styles.checkcard} key={prefecture.prefName}>
@@ -97,6 +99,13 @@ const Styles: { [key: string]: React.CSSProperties } = {
     textAlign: "center",
     padding: "4px",
     margin: "0.5rem",
+  },
+  label: {
+    fontSize: "20px",
+    padding: "0.5rem 2rem",
+    borderBottom: "2px solid #000",
+    marginLeft: "15pt",
+    marginRight: "15pt",
   },
 };
 

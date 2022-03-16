@@ -23,10 +23,8 @@ const Main: React.FC = () => {
 
   return (
     <main>
-      <h2 style={Styles.label}>{contents.label.prefs}</h2>
-      {prefectures && <CheckBoxField />}
-      <h2 style={Styles.label}>{contents.label.populations}</h2>
-      <Graph />
+      {prefectures && CheckBoxField(contents.label.prefs)}
+      {CheckBoxField(contents.label.populations)}
     </main>
   );
 };
@@ -34,13 +32,6 @@ const Main: React.FC = () => {
 const Styles: { [key: string]: React.CSSProperties } = {
   graph: {
     padding: "10px",
-  },
-  label: {
-    fontSize: "20px",
-    padding: "0.5rem 2rem",
-    borderBottom: "2px solid #000",
-    marginLeft: "15pt",
-    marginRight: "15pt",
   },
 };
 

@@ -6,7 +6,7 @@ import HighchartsReact from "highcharts-react-official";
 import { selectGraph } from "../store/graph/selectore";
 import { graphConfig } from "../constants/graphConfig";
 
-const Graph: React.FC = () => {
+const Graph: React.FC<string> = (label) => {
   const graph = useSelector(selectGraph);
 
   const options: Highcharts.Options = {
@@ -28,15 +28,25 @@ const Graph: React.FC = () => {
   };
 
   return (
-    <div style={Styles.graph}>
-      <HighchartsReact highcharts={Highcharts} options={options} />
-    </div>
+    <>
+      <h2 style={Styles.label}>{label}</h2>
+      <div style={Styles.graph}>
+        <HighchartsReact highcharts={Highcharts} options={options} />
+      </div>
+    </>
   );
 };
 
 const Styles: { [key: string]: React.CSSProperties } = {
   graph: {
     padding: "12px",
+  },
+  label: {
+    fontSize: "20px",
+    padding: "0.5rem 2rem",
+    borderBottom: "2px solid #000",
+    marginLeft: "15pt",
+    marginRight: "15pt",
   },
 };
 
