@@ -4,6 +4,8 @@
 
 以下の機能を実現する。
 
+- 基本機能
+
 1. RESAS(地域経済分析システム) API の「都道府県一覧」から API を取得する
 2. API レスポンスから都道府県一覧のチェックボックスを動的に生成する
 3. 都道府県にチェックを入れると、RESAS API から選択された都道府県の「人口構成」を取得する
@@ -80,3 +82,25 @@
    ```bash
     $ npm test
    ```
+
+## 開発期間
+
+日数: 4 日
+時間: 18 時間
+
+## 設計仕様
+
+- コンポーネント分割
+
+1. Main: <span style="color: blue; ">青色の □</span>の部分
+1. CheckBoxField: <span style="color: green; ">緑の □</span>の部分
+1. Graph: <span style="color: red; ">赤色の □</span>の部分
+   ![コンポーネント分割](https://github.com/iwakitakuma33/spa_redux_chart_populations/blob/main/readmeAssets/pcDisplay_Siyou.png?raw=true)
+
+- ステイト管理
+
+1. 使用技術: Redux
+2. 3 つの Reducer を使用している。
+   2.1 prefectures: API を使用して取得した都道府県コード等を補完
+   2.2 populations: API を使用して取得した特定の都道府県の人口構成データ群
+   2.3 graph: populations を使用して作成した graph データ
