@@ -101,6 +101,6 @@
 
 1. 使用技術: Redux
 2. 3 つの Reducer を使用している。
-   2.1 prefectures: API を使用して取得した都道府県コード等を補完
-   2.2 populations: API を使用して取得した特定の都道府県の人口構成データ群
-   2.3 graph: populations を使用して作成した graph データ
+   2.1 prefectures: API を使用して取得した都道府県コード等を補完<br/>
+   2.2 populations: API を使用して取得した特定の都道府県の人口構成データ群<br/>
+   2.3 graph: populations を使用して作成した graph データ<br/>
