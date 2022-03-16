@@ -72,7 +72,7 @@
    ```bash
     URL: https://opendata.resas-portal.go.jp/
    ```
-6. .env ファイルを作成後に、取得した API を記載し保存する。
+6. .env ファイルを作成後に、取得した API を記載し保存する。(<span style="color: red; ">セキュリティの観点より github 上にはアップロードしていない</span>)
 7. 実行
    ```bash
     $ npm start
