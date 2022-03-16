@@ -24,15 +24,9 @@ const Main: React.FC = () => {
   return (
     <main>
       {prefectures && CheckBoxField(contents.label.prefs)}
-      {CheckBoxField(contents.label.populations)}
+      {Graph(contents.label.populations)}
     </main>
   );
-};
-
-const Styles: { [key: string]: React.CSSProperties } = {
-  graph: {
-    padding: "10px",
-  },
 };
 
 export default Main;
