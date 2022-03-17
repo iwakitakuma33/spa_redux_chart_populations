@@ -17,10 +17,14 @@ export const PrefsReducer = (
         Prefectures
       >;
       if (payload) {
-        return { ...state, ...payload };
-      } else {
-        return state;
+        if (initPrefs === state) {
+          console.log("init");
+          return { ...payload };
+        } else {
+          return { ...state, ...payload };
+        }
       }
+      return state;
     }
 
     default:
