@@ -14,7 +14,7 @@
 - URL(デプロイ先:AWS EC2)
 
 ```
-http://work.iwakitakuma-my-portfolio.net/
+http://simple.iwakitakuma-my-portfolio.net/
 ```
 
 ## スクリーンショット

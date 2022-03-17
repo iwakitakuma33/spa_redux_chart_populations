@@ -25,7 +25,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "generate_sourcemap=false REACT_APP_API_KEY=sGrH40HrQVbae9f333nwmuyxDNG0faqnoQD6W3pZ react-scripts build",
+    "build": "react-scripts build",
     "test": "jest",
     "eject": "react-scripts eject",
     "lint": "eslint src"
