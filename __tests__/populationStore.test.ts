@@ -21,7 +21,6 @@ test("init", () => {
     payload: payload,
   };
   const state = PopulationsReducer([], action);
-  console.log(state);
   expect([payload]).toStrictEqual(state);
 });
 

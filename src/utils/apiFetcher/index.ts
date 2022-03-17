@@ -1,6 +1,7 @@
 import Axios from "axios";
 
-const BASE_URL = "https://opendata.resas-portal.go.jp/api/v1";
+const DOMAIN = "https://opendata.resas-portal.go.jp";
+const BASE_URL = "/api/v1";
 
 const axios = Axios.create({
   headers: {
@@ -36,7 +37,7 @@ export const apiFetcher = {
 
 function makeRequest(endpoint: string, method: Method) {
   return axios({
-    url: `${BASE_URL}${endpoint}`,
+    url: `${DOMAIN}${BASE_URL}${endpoint}`,
     method,
   });
 }

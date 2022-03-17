@@ -1,5 +1,5 @@
 {
-  "name": "react-highcharts",
+  "name": "react-redux-chart",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -67,5 +67,6 @@
   },
   "eslintIgnore": [
     "/.eslintrc.js"
-  ]
+  ],
+  "homepage": "./"
 }

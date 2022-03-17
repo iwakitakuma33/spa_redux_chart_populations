@@ -11,6 +11,12 @@
 3. 都道府県にチェックを入れると、RESAS API から選択された都道府県の「人口構成」を取得する
 4. 人口構成 API レスポンスから、X 軸:年、Y 軸:人口数の折れ線グラフを動的に生成して表示する
 
+- URL
+
+```
+https://iwakitakuma33.github.io/spa_redux_chart_populations/
+```
+
 ## スクリーンショット
 
 - PC の幅での表示

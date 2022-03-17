@@ -100,7 +100,6 @@ test("fetche graph", () => {
     payload: payload,
   };
   const state = GraphReducer(initGraph, action);
-  console.log(state);
   expect(resultGraph).toStrictEqual(state);
 });
 test("delete graph", () => {

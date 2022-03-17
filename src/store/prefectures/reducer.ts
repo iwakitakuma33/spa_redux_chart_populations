@@ -18,7 +18,6 @@ export const PrefsReducer = (
       >;
       if (payload) {
         if (initPrefs === state) {
-          console.log("init");
           return { ...payload };
         } else {
           return { ...state, ...payload };

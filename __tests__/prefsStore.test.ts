@@ -25,6 +25,5 @@ test("fetch Prefs", () => {
     payload: data,
   };
   const state = PrefsReducer(initPrefs, action);
-  console.log(state);
   expect(state).toStrictEqual(data);
 });
