@@ -4,7 +4,7 @@ import { PopulationData } from "../populations/types";
 import { GraphsActionTypes } from "./types";
 import { FSA } from "../typeFSA";
 
-const initGraph: graphSeries[] = [];
+export const initGraph: graphSeries[] = [];
 export const GraphReducer = (
   state = initGraph,
   action: GraphsActionTypes

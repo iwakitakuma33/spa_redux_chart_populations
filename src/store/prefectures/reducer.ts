@@ -2,8 +2,8 @@ import { ActionTypes } from "../actionTypes";
 import { Prefectures, PrefsActionTypes } from "./types";
 import { FSA } from "../typeFSA";
 
-const initPrefs: Prefectures = {
-  message: "test",
+export const initPrefs: Prefectures = {
+  message: "prefs init",
   result: [],
 };
 export const PrefsReducer = (

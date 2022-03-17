@@ -2,7 +2,7 @@ import { ActionTypes } from "../actionTypes";
 import { PopulationData, PopulationsActionTypes } from "./types";
 import { FSA } from "../typeFSA";
 
-const initPopulation: PopulationData[] = [];
+export const initPopulation: PopulationData[] = [];
 export const PopulationsReducer = (
   state = initPopulation,
   action: PopulationsActionTypes
