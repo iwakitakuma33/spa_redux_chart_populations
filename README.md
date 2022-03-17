@@ -11,10 +11,10 @@
 3. 都道府県にチェックを入れると、RESAS API から選択された都道府県の「人口構成」を取得する
 4. 人口構成 API レスポンスから、X 軸:年、Y 軸:人口数の折れ線グラフを動的に生成して表示する
 
-- URL
+- URL(デプロイ先:AWS EC2)
 
 ```
-https://iwakitakuma33.github.io/spa_redux_chart_populations/
+http://work.iwakitakuma-my-portfolio.net/
 ```
 
 ## スクリーンショット
@@ -28,7 +28,7 @@ https://iwakitakuma33.github.io/spa_redux_chart_populations/
 
 ## 動作確認について
 
-本レポジトリはテストコードを Jest で記載している。<br/>
+本レポジトリはテストコードを Jest を使用した。テスト対象はステイト管理のみです。<br/>
 以下の点について google chrome を使用した動作確認も実施した。<br/>
 
 1. レスポンジブ対応
@@ -110,3 +110,13 @@ https://iwakitakuma33.github.io/spa_redux_chart_populations/
    2.1 prefectures: API を使用して取得した都道府県コード等を補完<br/>
    2.2 populations: API を使用して取得した特定の都道府県の人口構成データ群<br/>
    2.3 graph: populations を使用して作成した graph データ<br/>
+
+- テスト結果
+  PASS **tests**/populationStore.test.ts (17.047 s)<br/>
+  PASS **tests**/prefsStore.test.ts (17.297 s)<br/>
+  PASS **tests**/graphStore.test.ts (18.321 s)<br/>
+  Test Suites: 3 passed, 3 total<br/>
+  Tests: 8 passed, 8 total<br/>
+  Snapshots: 0 total<br/>
+  Time: 19.372 s<br/>
+  Ran all test suites.<br/>
