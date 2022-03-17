@@ -1,14 +1,14 @@
 import React from "react";
-import { useSelector } from "react-redux";
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 
-import { selectGraph } from "../store/graph/selectore";
 import { graphConfig } from "../constants/graphConfig";
-
-const Graph: React.FC<string> = (label) => {
-  const graph = useSelector(selectGraph);
-
+import { graphSeries } from "../store/graph/types";
+type PropsGraph = {
+  label: string;
+  graph: graphSeries[];
+};
+const Graph: React.FC<PropsGraph> = ({ label, graph }) => {
   const options: Highcharts.Options = {
     title: {
       text: graphConfig.graphLabel.title,

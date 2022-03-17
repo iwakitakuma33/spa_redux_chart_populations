@@ -10,10 +10,13 @@ import { selectPrefs } from "../store/prefectures/selectore";
 import { apiFetcher } from "../utils/apiFetcher/index";
 import { apiConfig } from "../constants/apiConfig";
 import { contents } from "../constants/contents";
+import { selectGraph } from "../store/graph/selectore";
 
 const Main: React.FC = () => {
   const dispatch = useDispatch();
   const prefectures = useSelector(selectPrefs);
+  const graph = useSelector(selectGraph);
+
   useEffect(() => {
     const apiEndpointPrefsALL = apiConfig.endpoints.prefectures.all;
     apiFetcher.get(apiEndpointPrefsALL).then((results) => {
@@ -23,8 +26,12 @@ const Main: React.FC = () => {
 
   return (
     <main>
-      {prefectures && CheckBoxField(contents.label.prefs)}
-      {Graph(contents.label.populations)}
+      {prefectures &&
+        CheckBoxField({
+          label: contents.label.prefs,
+          prefectures: prefectures,
+        })}
+      {Graph({ label: contents.label.populations, graph: graph })}
     </main>
   );
 };

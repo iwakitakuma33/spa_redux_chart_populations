@@ -1,17 +1,22 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 import { apiConfig } from "../constants/apiConfig";
 import { apiFetcher } from "../utils/apiFetcher/index";
 
-import { selectPrefs } from "../store/prefectures/selectore";
 import { fetchPoplation, deletePoplation } from "../store/populations/action";
 import { fetchGraphData, deleteGraphData } from "../store/graph/action";
+import { Prefectures } from "../store/prefectures/types";
 
-const CheckBoxField: React.FC<string> = (label) => {
+type PropsCheckBoxField = {
+  label: string;
+  prefectures: Prefectures;
+};
+const CheckBoxField: React.FC<PropsCheckBoxField> = ({
+  label,
+  prefectures,
+}) => {
   const dispatch = useDispatch();
-
-  const prefectures = useSelector(selectPrefs);
 
   const handleClickCheck = (
     prefName: string,
