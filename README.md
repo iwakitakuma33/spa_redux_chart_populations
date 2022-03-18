@@ -28,7 +28,7 @@ https://62336c8f9eb24b00a0197ea8--agitated-snyder-b5f0d3.netlify.app/
 
 ## 動作確認について
 
-本レポジトリはテストコードを Jest を使用した。テスト対象はステイト管理のみです。<br/>
+本レポジトリはテストコードを Jest を使用した。テスト対象はステイト管理と CheckBoxField です。<br/>
 以下の点について google chrome を使用した動作確認も実施した。<br/>
 
 1. レスポンジブ対応
@@ -111,12 +111,14 @@ https://62336c8f9eb24b00a0197ea8--agitated-snyder-b5f0d3.netlify.app/
    2.2 populations: API を使用して取得した特定の都道府県の人口構成データ群<br/>
    2.3 graph: populations を使用して作成した graph データ<br/>
 
-- テスト結果<br/>
-  PASS **tests**/populationStore.test.ts (17.047 s)<br/>
-  PASS **tests**/prefsStore.test.ts (17.297 s)<br/>
-  PASS **tests**/graphStore.test.ts (18.321 s)<br/>
-  Test Suites: 3 passed, 3 total<br/>
-  Tests: 8 passed, 8 total<br/>
-  Snapshots: 0 total<br/>
-  Time: 19.372 s<br/>
-  Ran all test suites.<br/>
+- テスト結果
+
+PASS **tests**/prefsStore.test.ts<br/>
+PASS **tests**/populationStore.test.ts<br/>
+PASS **tests**/graphStore.test.ts<br/>
+PASS **tests**/FormComponent.test.tsx (10.73 s)<br/>
+
+Test Suites: 4 passed, 4 total<br/>
+Tests: 9 passed, 9 total<br/>
+Snapshots: 0 total<br/>
+Time: 11.607 s<br/>

@@ -1,0 +1,19 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "allowJs": true,
+    "noEmit": true,
+    "strict": true,
+    "jsx": "react",
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["ソースのあるディレクトリ/*"]
+    },
+    "lib": ["ES2019", "dom"],
+    "module": "commonjs",
+    "target": "ES2019",
+    "resolveJsonModule": true
+  },
+  "exclude": ["node_modules"]
+}
