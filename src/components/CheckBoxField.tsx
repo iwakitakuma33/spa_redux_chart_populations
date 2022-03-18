@@ -53,6 +53,9 @@ const CheckBoxField: React.FC<PropsCheckBoxField> = ({
   };
 
   const formatPrefName = (prefName: string) => {
+    if (prefName.length > 4) {
+      return prefName;
+    }
     const indentCount: number = 4 - prefName.length;
     const indentStr = "　";
     return indentStr.repeat(indentCount) + prefName;

@@ -11,6 +11,7 @@
     "@types/react-dom": "^17.0.0",
     "@types/react-redux": "^7.1.23",
     "@types/redux": "^3.6.0",
+    "@types/sinon": "^10.0.11",
     "axios": "^0.21.1",
     "highcharts": "^9.2.2",
     "highcharts-react-official": "^3.0.0",
@@ -19,13 +20,13 @@
     "react-redux": "^7.2.6",
     "react-scripts": "4.0.3",
     "redux": "^4.1.2",
-    "ts-jest": "^26.5.0",
+    "sinon": "^13.0.1",
     "ts-node": "^10.7.0",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "GENERATE_SOURCEMAP=false react-scripts build",
+    "build": "react-scripts build",
     "test": "jest",
     "eject": "react-scripts eject",
     "lint": "eslint src"
@@ -57,12 +58,16 @@
     "@typescript-eslint/parser": "^5.15.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.6",
-    "enzyme-adapter-react-17-updated": "^1.0.2",
     "eslint": "^7.1.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-react": "^7.29.4",
-    "jest": "^26.6.0",
+    "jest": "^26.6.3",
+    "jsdom": "19.0.0",
+    "jsdom-global": "3.0.2",
+    "json-parser": "^3.1.2",
     "prettier": "^2.5.1",
+    "ts-jest": "^26.5.6",
+    "ts-sinon": "^2.0.2",
     "typescript": "^4.6.2"
   },
   "eslintIgnore": [
